@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: webapp:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGODB_USER
+              value: "mongoUser"
+            - name: MONGODB_PASSWORD
+              value: "mongoPassword"
+            - name: MONGODB_HOST
+              value: "mongodb"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 5
