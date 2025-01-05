@@ -20,7 +20,8 @@ Il manque un fichier, l'erreur suivante est retournée :
 Il faut donc le créer manuellement pour corriger l'erreur.
 
 ## « Faut qu’ça tourne! » Redémarrez le conteneur webapp et connectez-y vous pour le faire fonctionner tout de même.
-En créant le fichier
+En créant le fichier la création ne pose plus de problèmes.
+
 ![qmsldkm](https://github.com/user-attachments/assets/47d4e252-fba3-4485-917d-6969a82345fc)
 
 
